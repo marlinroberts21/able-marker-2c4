@@ -1,10 +1,13 @@
 # content of test_tmp_path.py
 # pytest test_tmp_path.py
 
+from pathlib import Path
+
+
 CONTENT = "content"
 
 
-def test_create_file(tmp_path):
+def test_create_file(tmp_path: Path):
     d = tmp_path / "sub"
     d.mkdir()
     p = d / "hello.txt"
